@@ -1,15 +1,17 @@
-
-
 class BoardCase
-attr_accessor :symbol, :case_number
+    attr_accessor :symbol
+    def initialize
+        @symbol = "       "
+    end
 
-    def initialize(symbol)
-        @symbol = ""
-        # @symbol = ["X","O"," "]
-        # @case_number = ["A1","A2","A3","B1","B2","B3","C1","C2","C3"]
-        # @boardcase_hash = {@symbol => @case_number}
-    end  
+    def update_symbol(symbol) #méthode pour définir si la case a un symbole
+		if @symbol == " " #verifie si absence de symbole
+			
+			@symbol = symbol #état après apparition d'un symbole
+			return 1 #renvoie 1 si tout est ok
+		else  
+			return 0 #renvoie 0 si une erreur	
+		end	
+	end
+
 end
-     
-
-
