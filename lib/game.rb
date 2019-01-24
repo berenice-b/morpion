@@ -1,18 +1,13 @@
 require './board'
 require './player'
-require 'pry'
+#require 'pry'
 
 class Game
-    attr_accessor :turn
 
-    def get_names
-        puts "Merci d'entrer le nom du premier joueur ( symbole : x )"
-        @player_1 = gets.chomp
-        puts "Merci d'entrer le nom du second joueur ( symbole : o )"
-        @player_2 = gets.chomp
-        @player_names = [@player_1, @player_2]
-        return @player_names
+    def initialize
     end
+
+
 
     def add_player      # définit le joueur et son symbole
         player = Player.new
@@ -27,23 +22,26 @@ class Game
         end
     end
 
-    def launch_game
-        @first_board = Board.new
+    def case_choice(myplayer)
+        puts "#{myplayer}, rentrez votre case"
+        @imput_case = gets.chomp
+        return choix = @imput_case
+    end
+
+    def turn2
+        @first_board.choice_impact
+        #@array_boardcases.push(@imput_case)
         @first_board.display_board
-        array_boardcases = gets.chomp.to_i 
-        puts "#{@player_names[@turn]}"
+        #puts "#{@player_names[@turn]}"
     end
 
     def perform
         puts get_names
         puts add_player
-        puts turn
+        # puts turn
         puts launch_game
         
     end
 #binding.pry
 end
-
-Game.new.perform
-
 
