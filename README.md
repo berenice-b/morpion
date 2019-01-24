@@ -1,6 +1,6 @@
 # Membres du projet
-Mathieu Pierre @Mathieu Pierre
-Bérénice @Bérénice
+- Mathieu Pierre @Mathieu Pierre
+- Bérénice @Bérénice
 
 # A propos du projet
 Le morpion, semaine 3 jour 4
